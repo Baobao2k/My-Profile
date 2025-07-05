@@ -38,147 +38,118 @@
       - #SIDEBAR
     -->
 
-        <aside class="sidebar" data-sidebar>
+       <aside class="sidebar" data-sidebar>
 
   <div class="sidebar-info">
 
+    <!-- Avatar -->
     <figure class="avatar-box">
-      <img src="./assets/images/avt.jpg" alt="Richard hanrick" width="80" style="border-radius: 15%;">
+      <img src="./assets/images/avt.jpg" alt="Avatar" width="80" style="border-radius: 15%;">
     </figure>
 
+    <!-- Nội dung bên phải -->
     <div class="info-content">
-      <h1 class="name" title="Richard hanrick">ヴァン・ファック</h1>
+      <h1 class="name" title="ヴァン・ファック">ヴァン・ファック</h1>
       <p class="title">ソフトウェアエンジニア</p>
 
-      <!-- ✅ Giữ lại icon trong box -->
-      <div class="language-box" style="display: flex; align-items: flex-start; gap: 10px; margin-top: 10px;">
-        <div class="icon-box">
-          <ion-icon name="language-outline"></ion-icon>
-        </div>
-        <div>
-          <p class="contact-title">言語</p>
-          <div style="color: white; font-size: 12px;">
-            <p style="margin: 0; white-space: nowrap;">🇻🇳 ベトナム語（母語）</p>
-            <p style="margin: 0;">🇯🇵 日本語（N3）</p>
-            <p style="margin: 0;">🇬🇧 英語（Bレベル）</p>
-          </div>
-        </div>
-      </div>
-
+     <div class="language-box" style="display: flex; align-items: flex-start; gap: 10px; margin-top: 10px;">
+  <div class="icon-box">
+    <ion-icon name="language-outline"></ion-icon>
+  </div>
+  <div>
+  <p class="contact-title">言語</p>
+  <div class="language-list">
+    <p class="lang-item" style="color: white; font-size: 12px;">🇻🇳 ベトナム語（母語）</p>
+    <p class="lang-item" style="color: white; font-size: 12px;">🇯🇵 日本語（N3）</p>
+    <p class="lang-item" style="color: white; font-size: 12px;">🇬🇧 英語（Bレベル）</p>
+  </div>
+</div>
+</div>
     </div>
 
-    <button class="info_more-btn" data-sidebar-btn>
-      <span>連絡先</span>
-      <ion-icon name="chevron-down"></ion-icon>
-    </button>
-
   </div>
 
+  <button class="info_more-btn" data-sidebar-btn>
+    <span>連絡先</span>
+    <ion-icon name="chevron-down"></ion-icon>
+  </button>
 
-    <button class="info_more-btn" data-sidebar-btn>
-      <span>連絡先</span>
-      <ion-icon name="chevron-down"></ion-icon>
-    </button>
+  <div class="separator"></div>
 
-  </div>
+  <!-- Thông tin liên hệ -->
+  <ul class="contacts-list">
 
-                <div class="separator"></div>
+    <li class="contact-item">
+      <div class="icon-box">
+        <ion-icon name="mail-outline"></ion-icon>
+      </div>
+      <div class="contact-info">
+        <p class="contact-title">メール</p>
+        <div class="marquee-wrapper">
+          <a href="mailto:tbaobao2000@gmail.com" class="marquee-text">Tbaobao2000@gmail.com</a>
+        </div>
+      </div>
+    </li>
 
-                <ul class="contacts-list">
+    <li class="contact-item">
+      <div class="icon-box">
+        <ion-icon name="phone-portrait-outline"></ion-icon>
+      </div>
+      <div class="contact-info">
+        <p class="contact-title">電話番号</p>
+        <a href="tel:+84833331236" class="contact-link">+84833331236</a>
+      </div>
+    </li>
 
-                    <li class="contact-item">
+    <li class="contact-item">
+      <div class="icon-box">
+        <ion-icon name="calendar-outline"></ion-icon>
+      </div>
+      <div class="contact-info">
+        <p class="contact-title">生年月日</p>
+        <time datetime="1991-05-06">06/05/199X</time>
+      </div>
+    </li>
 
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
+    <li class="contact-item">
+      <div class="icon-box">
+        <ion-icon name="location-outline"></ion-icon>
+      </div>
+      <div class="contact-info">
+        <p class="contact-title">住所</p>
+        <address>ベトナム・HATINH省HUONGKHE郡HUONGLAM村</address>
+      </div>
+    </li>
 
-                        <div class="contact-info">
-                            <p class="contact-title">メール</p>
+  </ul>
 
-                            <div class="marquee-wrapper">
-                             <a href="mailto:tbaobao2000@gmail.com" class="marquee-text">Tbaobao2000@gmail.com</a>
-                            </div>
+  <div class="separator"></div>
 
-                        </div>
+  <!-- Mạng xã hội -->
+  <ul class="social-list">
+    <li class="social-item">
+      <a href="https://www.facebook.com/phac.tran.14019" class="social-link">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </li>
+    <li class="social-item">
+      <a href="https://www.tiktok.com/@sn199x" class="social-link">
+        <ion-icon name="logo-tiktok"></ion-icon>
+      </a>
+    </li>
+    <li class="social-item">
+      <a href="https://github.com/Baobao2k" class="social-link">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+    </li>
+    <li class="social-item">
+      <a href="https://beacons.ai/tiengnhatkhongkho" class="social-link">
+        <i class="fa-solid fa-blog"></i>
+      </a>
+    </li>
+  </ul>
 
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">電話番号</p>
-
-                            <a href="tel:+84833331236" class="contact-link">+84833331236</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">生年月日</p>
-
-                            <time datetime="1991-05-06">06/05/199X</time>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">住所</p>
-
-                            <address>ベトナム・HATINH省HUONGKHE郡HUONGLAM村</address>
-                        </div>
-
-                    </li>
-
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-
-                    <li class="social-item">
-                        <a href="https://www.facebook.com/phac.tran.14019" class="social-link">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://www.tiktok.com/@sn199x" class="social-link">
-                            <ion-icon name="logo-tiktok"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://github.com/Baobao2k" class="social-link">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a href="https://beacons.ai/tiengnhatkhongkho" class="social-link">
-                           
-                            <i class="fa-solid fa-blog"></i>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </aside>
+</aside>
 
 
 
