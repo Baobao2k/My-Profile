@@ -400,7 +400,7 @@ main {
 .contacts-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 4px;
 }
 
 .contact-item {
@@ -445,6 +445,13 @@ main {
 
 
 .social-item .social-link:hover { color: var(--light-gray); }
+.contact-item,
+.contact-info,
+.contact-info * {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4;
+}
 
 
 
@@ -1384,12 +1391,28 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .separator { margin: 32px 0; }
 
-  .contacts-list { gap: 20px; }
+  .contacts-list { gap: 8px; }
 
   .contact-info {
     max-width: calc(100% - 64px);
     width: calc(100% - 64px);
   }
+.marquee-wrapper {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.marquee-text {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+.contact-link {
+  line-height: 1.2;
+  margin: 0;
+}
 
 
 
@@ -1971,16 +1994,58 @@ textarea.form-input::-webkit-resizer { display: none; }
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
-.skill-progress-bg {
-  background-color: #333;
+.skill-progress-fill {
   height: 8px;
   border-radius: 4px;
-  overflow: hidden;
+  background-color: #fbc02d;
+  width: 0; /* ban đầu ẩn */
+  transition: width 1.5s ease-in-out;
+}
+/* Đẩy toàn bộ nội dung lên trên */
+.sidebar {
+  padding-top: 10px !important;
 }
 
-.skill-progress-fill {
-  height: 100%;
-  background-color: #fbc02d;
-  width: 0;
-  transition: width 2s ease-in-out;
+/* Giảm khoảng cách giữa các phần */
+.sidebar-info,
+.contact-item,
+.contact-info,
+.contact-info p,
+.contact-info a,
+.contact-info time,
+.contact-info address,
+.social-list {
+  margin: 0px 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* Avatar căn giữa và gần sát trên */
+.avatar-box img {
+  margin-top: 0 !important;
+  margin-bottom: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tên và chức danh sát lại */
+.name {
+  margin: 4px 0 !important;
+  font-size: 1.2rem;
+}
+.title {
+  margin: 2px 0 !important;
+  font-size: 0.9rem;
+}
+
+/* Gạch phân cách mỏng hơn */
+.separator {
+  margin: 6px 0 !important;
+  border-top: 1px solid #444;
+}
+
+/* Nút "連絡先" nếu muốn ẩn */
+.info_more-btn {
+  display: none;
 }
