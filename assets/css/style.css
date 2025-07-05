@@ -1904,3 +1904,83 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  color: #dfdf1e;
+  font-family: 'Fira Code', monospace;
+  animation: scroll-left 10s linear infinite;
+  font-size: 14px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.typing-text {
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  color: #ffffff;
+  white-space: pre-wrap;
+  border-right: 2px solid #00ffff;
+  overflow: hidden;
+}
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: #fff;
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.clients-item img {
+  filter: brightness(0.5); /* ảnh ban đầu hơi tối */
+  transition: filter 0.5s ease;
+}
+
+/* Hiệu ứng sáng lần lượt */
+@keyframes spotlight {
+  0%   { filter: brightness(1); }
+  100% { filter: brightness(0.5); }
+}
+
+.clients-item img.animate {
+  animation: spotlight 1s ease-in-out forwards;
+}
+.service-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;         /* Tuỳ chọn: bo góc đẹp hơn */
+  background-color: #1c1c1e;   /* Tuỳ chọn: nền tối giống ảnh */
+  padding: 20px;               /* Tuỳ chọn: tạo khoảng cách */
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+.skill-progress-bg {
+  background-color: #333;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  background-color: #fbc02d;
+  width: 0;
+  transition: width 2s ease-in-out;
+}

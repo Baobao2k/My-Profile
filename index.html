@@ -76,7 +76,10 @@
                         <div class="contact-info">
                             <p class="contact-title">メール</p>
 
-                            <a href="mailto:tbaobao2000@gmail.com" class="contact-link">tbaobao2000@gmail.com</a>
+                            <div class="marquee-wrapper">
+                             <a href="mailto:tbaobao2000@gmail.com" class="marquee-text">Tbaobao2000@gmail.com</a>
+                            </div>
+
                         </div>
 
                     </li>
@@ -191,10 +194,100 @@
                 </ul>
 
             </nav>
+<div id="toast-message" style="
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.5); /* trong suốt hơn */
+  padding: 8px 12px;
+  border-radius: 10px;
+  z-index: 9999;
+  display: none;
+  max-width: 280px; /* nhỏ lại */
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  font-size: 13px;
+">
+  <div style="display: flex; justify-content: space-between; gap: 8px;">
+    <button class="tab-btn" data-index="0" style="
+      white-space: nowrap;
+      flex: 1;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 8px;
+      cursor: pointer;
+    ">私について</button>
+    <button class="tab-btn" data-index="1" style="
+      white-space: nowrap;
+      flex: 1;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 8px;
+      cursor: pointer;
+    ">履歴書</button>
+    <button class="tab-btn" data-index="2" style="
+      white-space: nowrap;
+      flex: 1;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 8px;
+      cursor: pointer;
+    ">ポートフォリオ</button>
+  </div>
+</div>
 
+<script>
+  const buttons = document.querySelectorAll(".navbar-link");
+  const toast = document.getElementById("toast-message");
+  const tabButtons = document.querySelectorAll(".tab-btn");
 
+  let currentIndex = 0;
 
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const index = parseInt(btn.getAttribute("data-index"));
+      if (buttons[index]) {
+        buttons[index].click();
+        currentIndex = index;
+        window.scrollTo({ top: 50, behavior: "smooth" });
+        updateActiveTabUI();
+      }
+    });
+  });
 
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const bodyHeight = document.body.scrollHeight;
+
+    if (scrollTop + windowHeight >= bodyHeight - 10 || scrollTop <= 5) {
+      toast.style.display = "block";
+    } else {
+      toast.style.display = "none";
+    }
+  });
+
+  function updateActiveTabUI() {
+    tabButtons.forEach((btn, i) => {
+      if (i === currentIndex) {
+        btn.style.backgroundColor = "#facc15"; // vàng sáng
+        btn.style.color = "#000";
+      } else {
+        btn.style.backgroundColor = "#444";
+        btn.style.color = "#fff";
+      }
+    });
+  }
+
+  // Lần đầu gọi để đánh dấu đúng tab
+  updateActiveTabUI();
+</script>
 
             <!--
         - #ABOUT
@@ -208,7 +301,7 @@
 
                 <section class="about-text">
                     <p>
-                        私は : Android開発者.Web開発者.ソフトウェアエンジニア. WebとAndroidアプリの開発を通じて、 人々の毎日をより便利でスマートにする体験をデザインしています。 Kolin・Java・PHPなどの技術を活用し、 ユーザー中心の実用的なソリューションを構築しています。 2年間の経験を持つフルスタック開発者として、 あなたのアイデアを一緒に形にしていきましょう！
+                        <div id="typing-text" class="typing-text"></div>
                     </p>
                 </section>
 
@@ -535,7 +628,7 @@
                             </div>
 
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%;"></div>
+                                <div class="skill-progress-fill" data-value="80"></div>
                             </div>
 
                         </li>
@@ -548,7 +641,7 @@
                             </div>
 
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                                <div class="skill-progress-fill" data-value="90"></div>
                             </div>
 
                         </li>
@@ -561,7 +654,7 @@
                             </div>
 
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 60%;"></div>
+                                <div class="skill-progress-fill" data-value="60"></div>
                             </div>
 
                         </li>
@@ -574,7 +667,7 @@
                             </div>
 
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 70%;"></div>
+                                <div class="skill-progress-fill" data-value="70"></div>
                             </div>
 
                         </li>
@@ -729,26 +822,6 @@
 
                             </a>
                         </li>
-                        <li class="project-item  active" data-filter-item data-category="ウェブ開発">
-                            <a href="#">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/quangbinh.jpg" alt="metaspark" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">クアンビン旅行</h3>
-
-                                <p class="project-category">ウェブサイト</p>
-                                <a href="https://netintravel.com/" class="project-title" style="color: red;">" サイトを見る " </a>
-
-                            </a>
-                        </li>
-
-
                         <li class="project-item  active" data-filter-item data-category="モバイルアプリ">
                             <a href="#">
 
@@ -782,6 +855,24 @@
 
                                 <p class="project-category">アプリケーション</p>
                                 <a href="https://github.com/Baobao2k/flutter_travel_app" class="project-title" style="color: red;">" サイトを見る " </a>
+
+                            </a>
+                        </li>
+                             <li class="project-item  active" data-filter-item data-category="ウェブ開発">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/quangbinh.jpg" alt="metaspark" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">クアンビン旅行</h3>
+
+                                <p class="project-category">ウェブサイト</p>
+                                <a href="https://netintravel.com/" class="project-title" style="color: red;">" サイトを見る " </a>
 
                             </a>
                         </li>
@@ -1048,8 +1139,89 @@
     - ionicon link
   -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+<script>
+  const textLines = [
+    "私は：Android開発者、Web開発者、ソフトウェアエンジニア。",
+    "WebとAndroidアプリの開発を通じて、",
+    "人々の毎日をより便利でスマートにする体験をデザインしています。",
+    "Kotlin・Java・PHPなどの技術を活用し、",
+    "ユーザー中心の実用的なソリューションを構築しています。",
+    "2年間の経験を持つフルスタック開発者として、",
+    "あなたのアイデアを一緒に形にしていきましょう！"
+  ];
+
+  const element = document.getElementById("typing-text");
+  let line = 0;
+  let char = 0;
+  let content = "";
+
+  function typeLine() {
+    if (line >= textLines.length) return;
+
+    const currentLine = textLines[line];
+
+    if (char < currentLine.length) {
+      content += currentLine[char];
+      char++;
+      element.innerHTML = content + '<span class="cursor"></span>';
+      setTimeout(typeLine, 20);
+    } else {
+      content += "<br>";
+      line++;
+      char = 0;
+      setTimeout(typeLine, 00);
+    }
+  }
+
+  typeLine();
+</script>
+<script>
+  const clientImages = document.querySelectorAll(".clients-item img");
+
+  clientImages.forEach((img, index) => {
+    setTimeout(() => {
+      img.classList.add("animate");
+      setTimeout(() => img.classList.remove("animate"), 1000); // Tắt sau khi sáng
+    }, index * 500); // Mỗi ảnh delay 500ms
+  });
+
+  // Lặp lại hiệu ứng mỗi 5 giây
+  setInterval(() => {
+    clientImages.forEach((img, index) => {
+      setTimeout(() => {
+        img.classList.add("animate");
+        setTimeout(() => img.classList.remove("animate"), 1000);
+      }, index * 500);
+    });
+  }, 6000);
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const progressBars = document.querySelectorAll(".skill-progress-fill");
+
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+
+    function animateBars() {
+      progressBars.forEach((bar) => {
+        const value = bar.getAttribute("data-value");
+        if (isInViewport(bar)) {
+          bar.style.width = value + "%";
+        } else {
+          // Reset về 0% nếu thanh đó đi ra ngoài màn hình
+          bar.style.width = "0%";
+        }
+      });
+    }
+
+    window.addEventListener("scroll", animateBars);
+    animateBars(); // Chạy khi load lần đầu nữa
+  });
+</script>
 </body>
 
 </html>
