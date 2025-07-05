@@ -40,41 +40,48 @@
 
         <aside class="sidebar" data-sidebar>
 
-            <div class="sidebar-info">
+  <div class="sidebar-info">
 
-                <figure class="avatar-box">
-                    <img src="./assets/images/avt.jpg" alt="Richard hanrick" width="80" style="border-radius: 15%;">
-                </figure>
+    <figure class="avatar-box">
+      <img src="./assets/images/avt.jpg" alt="Richard hanrick" width="80" style="border-radius: 15%;">
+    </figure>
+
+    <div class="info-content">
+      <h1 class="name" title="Richard hanrick">ヴァン・ファック</h1>
+      <p class="title">ソフトウェアエンジニア</p>
+
+      <!-- ✅ Giữ lại icon trong box -->
+      <div class="language-box" style="display: flex; align-items: flex-start; gap: 10px; margin-top: 10px;">
+        <div class="icon-box">
+          <ion-icon name="language-outline"></ion-icon>
+        </div>
+        <div>
+          <p class="contact-title">言語</p>
+          <div style="color: white; font-size: 12px;">
+            <p style="margin: 0; white-space: nowrap;">🇻🇳 ベトナム語（母語）</p>
+            <p style="margin: 0;">🇯🇵 日本語（N3）</p>
+            <p style="margin: 0;">🇬🇧 英語（Bレベル）</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="info_more-btn" data-sidebar-btn>
+      <span>連絡先</span>
+      <ion-icon name="chevron-down"></ion-icon>
+    </button>
+
+  </div>
 
 
-                <div class="info-content">
-                    <h1 class="name" title="Richard hanrick">ヴァン・ファック</h1>
+    <button class="info_more-btn" data-sidebar-btn>
+      <span>連絡先</span>
+      <ion-icon name="chevron-down"></ion-icon>
+    </button>
 
-                    <p class="title">ソフトウェアエンジニア</p>
-                </div>
+  </div>
 
-                <button class="info_more-btn" data-sidebar-btn>
-          <span>連絡先</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-            </div>
-
-            <li class="contact-item">
-            <div class="icon-box">
-                <ion-icon name="language-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-            <p class="contact-title">言語</p>
-            <div style="color: white; font-size: 12px;">
-                <p style="margin: 0; white-space: nowrap;">🇻🇳 ベトナム語（母語）</p>
-                <p style="margin: 0;">🇯🇵 日本語（N3）</p>
-                <p style="margin: 0;">🇬🇧 英語（Bレベル）</p>
-            </div>
-            </div>
-            </li>
                 <div class="separator"></div>
 
                 <ul class="contacts-list">
@@ -431,8 +438,7 @@
 
                             <div data-modal-text>
                                 <p>
-                                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et
-                                    eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                                    ok
                                 </p>
                             </div>
 
@@ -1136,9 +1142,6 @@
 
 
 
-
-
-
     <!--
     - custom js link
   -->
@@ -1192,11 +1195,10 @@
   clientImages.forEach((img, index) => {
     setTimeout(() => {
       img.classList.add("animate");
-      setTimeout(() => img.classList.remove("animate"), 1000); // Tắt sau khi sáng
-    }, index * 500); // Mỗi ảnh delay 500ms
+      setTimeout(() => img.classList.remove("animate"), 1000); 
+    }, index * 500); 
   });
 
-  // Lặp lại hiệu ứng mỗi 5 giây
   setInterval(() => {
     clientImages.forEach((img, index) => {
       setTimeout(() => {
@@ -1221,14 +1223,13 @@
         if (isInViewport(bar)) {
           bar.style.width = value + "%";
         } else {
-          // Reset về 0% nếu thanh đó đi ra ngoài màn hình
           bar.style.width = "0%";
         }
       });
     }
 
     window.addEventListener("scroll", animateBars);
-    animateBars(); // Chạy khi load lần đầu nữa
+    animateBars(); 
   });
 </script>
 </body>
