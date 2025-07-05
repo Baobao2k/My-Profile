@@ -728,7 +728,7 @@ main {
 
 .clients { margin-bottom: 15px; }
 
-.clients-list {
+/* .clients-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -754,8 +754,32 @@ main {
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.clients-item img:hover { filter: grayscale(0); } */
 
+
+.clients-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 cột */
+  gap: 30px;
+  padding: 25px;
+  list-style: none;
+  margin: 0 auto;
+}
+
+
+.clients-item {
+  text-align: center;
+}
+.clients-item img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 10px;
+  filter: grayscale(1);
+  transition: var(--transition-1);
+}
+.clients-item img:hover {
+  filter: grayscale(0);
+}
 
 
 
