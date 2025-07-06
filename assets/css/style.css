@@ -2349,3 +2349,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .social-list a:hover i {
   transform: scale(1.2);
 }
+.social-list img {
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
