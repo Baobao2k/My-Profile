@@ -609,6 +609,43 @@ main {
     justify-content: center;
   }
 }
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.icon-box {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffcc00;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 2px;
+}
+
+.contact-link,
+.lang-item,
+.contact-info time,
+.contact-info address {
+  color: white;
+  font-size: 12px;
+  line-height: 1.4;
+  text-decoration: none;
+  word-break: break-word;
+}
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
