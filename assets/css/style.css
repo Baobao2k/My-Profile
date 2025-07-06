@@ -333,9 +333,8 @@ main {
   gap: 15px;
 }
 .counter-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  text-align: center;
+  margin-top: 20px; /* Tuỳ chọn */
 }
 .avatar-box {
   display: flex;
