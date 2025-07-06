@@ -332,7 +332,11 @@ main {
   text-align: center;
   gap: 15px;
 }
-
+.counter-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 .avatar-box {
   display: flex;
   justify-content: center;     /* Avatar căn giữa khi dọc */
