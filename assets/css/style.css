@@ -558,7 +558,17 @@ main {
     align-items: flex-start;
   }
 }
+@media (max-width: 767px) {
+  .sidebar {
+    max-height: none !important;
+    overflow: visible !important;
+  }
 
+  .sidebar-info_more {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
