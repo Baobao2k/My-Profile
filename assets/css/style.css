@@ -2192,7 +2192,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: 18px;
   color: #ffffff;
   white-space: pre-wrap;
-  border-right: 2px solid #2a2c27;
   overflow: hidden;
 }
 .cursor {
