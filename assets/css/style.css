@@ -609,42 +609,72 @@ main {
     justify-content: center;
   }
 }
+.contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
 .icon-box {
   width: 24px;
   height: 24px;
-  flex-shrink: 0;
+  margin-right: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffcc00;
+  color: #FFD700; /* Vàng */
+  flex-shrink: 0;
 }
 
 .contact-info {
   flex: 1;
+  text-align: left;
 }
 
 .contact-title {
+  font-weight: bold;
   font-size: 13px;
+  margin: 0 0 4px;
   color: #ccc;
-  margin-bottom: 2px;
 }
 
+.contact-text,
 .contact-link,
 .lang-item,
-.contact-info time,
-.contact-info address {
+address,
+time {
+  font-size: 13px;
   color: white;
-  font-size: 12px;
-  line-height: 1.4;
-  text-decoration: none;
-  word-break: break-word;
+  margin: 0;
+  line-height: 1.5;
+  display: block;
+  text-align: left;
+}
+
+.lang-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-title {
+  font-weight: bold;
+  color: #f0dc6f; /* vàng */
+  margin-bottom: 4px;
+  font-size: 14px;
+  text-align: left;
+}
+.contact-text address {
+  font-size: 11px; 
+}
+.contact-text {
+  text-align: left;
 }
 /*-----------------------------------*\
   #NAVBAR
