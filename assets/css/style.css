@@ -681,6 +681,8 @@ time {
 .contact-text {
   text-align: left;
 }
+
+
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -2309,5 +2311,41 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .clients-item img:hover {
+  transform: scale(1.2);
+}
+.social-link {
+  font-size: 22px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+/* Màu khi hover */
+.social-icon-facebook:hover {
+  color: #1877f2;
+}
+
+.social-icon-tiktok:hover {
+  color: #ff0050;
+}
+
+.social-icon-github:hover {
+  color: #333;
+}
+
+.social-icon-blog:hover {
+  color: #e35b23;
+}
+.social-list a img,
+.social-list a i {
+  transition: transform 0.3s ease;
+}
+
+.social-list a:hover img,
+.social-list a:hover i {
   transform: scale(1.2);
 }
