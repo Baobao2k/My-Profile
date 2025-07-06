@@ -332,8 +332,11 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* giúp căn giữa khối trong layout dọc */
+  width: 100%; /* hoặc giá trị phù hợp */
 }
 
 .info-content .name {
@@ -479,54 +482,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-}
-/*Hien thi ben dien thoai*/
-@media screen and (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    position: relative;
-    padding: 10px;
-    border-radius: 0;
-  }
-
-  .sidebar-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-content {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .language-box {
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .contacts-list {
-    padding-left: 0;
-  }
-
-  .contact-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-info {
-    margin-top: 5px;
-  }
-
-  .social-list {
-    justify-content: center;
-  }
-
-  .social-item {
-    margin: 0 5px;
   }
 }
 
@@ -1236,7 +1191,7 @@ main {
   border-radius: 16px;
   margin-bottom: 30px;
   border: 1px solid var(--jet);
-  overflow: auto;
+  overflow: hidden;
 }
 
 .mapbox figure { height: 100%; }
