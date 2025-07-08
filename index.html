@@ -197,16 +197,16 @@
         - #NAVBAR
       -->
 
-            <nav class="navbar">
+  <nav class="navbar">
   <ul class="navbar-list">
     <li class="navbar-item">
-      <button class="navbar-link active" data-nav-link>私について</button>
+      <button class="navbar-link active" data-nav-link data-target="about">私について</button>
     </li>
     <li class="navbar-item">
-      <button class="navbar-link" data-nav-link>履歴書</button>
+      <button class="navbar-link" data-nav-link data-target="resume">履歴書</button>
     </li>
     <li class="navbar-item">
-      <button class="navbar-link" data-nav-link>ポートフォリオ</button>
+      <button class="navbar-link" data-nav-link data-target="portfolio">ポートフォリオ</button>
     </li>
   </ul>
 </nav>
@@ -214,62 +214,17 @@
 <div id="toast-message" class="toast-message">
   <div style="display: flex; justify-content: space-between; gap: 8px;">
     <button class="tab-btn btn-me" data-index="0">私について</button>
-    <button class="tab-btn btn-tomtat" data-index="1" >履歴書</button>
-    <button class="tab-btn btn-project" data-index="2" >ポートフォリオ</button>
+    <button class="tab-btn btn-tomtat" data-index="1">履歴書</button>
+    <button class="tab-btn btn-project" data-index="2">ポートフォリオ</button>
   </div>
 </div>
 
-<script>
-  const buttons = document.querySelectorAll(".navbar-link");
-  const toast = document.getElementById("toast-message");
-  const tabButtons = document.querySelectorAll(".tab-btn");
-
-  let currentIndex = 0;
-
-  tabButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const index = parseInt(btn.getAttribute("data-index"));
-      if (buttons[index]) {
-        buttons[index].click();
-        currentIndex = index;
-        window.scrollTo({ top: 50, behavior: "smooth" });
-        updateActiveTabUI();
-      }
-    });
-  });
-
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const bodyHeight = document.body.scrollHeight;
-
-    if (scrollTop + windowHeight >= bodyHeight - 10 || scrollTop <= 5) {
-      toast.style.display = "block";
-    } else {
-      toast.style.display = "none";
-    }
-  });
-
-  function updateActiveTabUI() {
-    tabButtons.forEach((btn, i) => {
-      if (i === currentIndex) {
-        btn.style.backgroundColor = "#facc15";
-        btn.style.color = "#000";
-      } else {
-        btn.style.backgroundColor = "rgba(255,255,255,0.08)";
-        btn.style.color = "#fff";
-      }
-    });
-  }
-
-  updateActiveTabUI();
-</script>
 
             <!--
         - #ABOUT
       -->
 
-            <article class="about  active" data-page="私について">
+            <article class="about  active" data-page="about">
 
                 <header>
                     <h2 class="h2 article-title">私について</h2>
@@ -489,7 +444,7 @@
         - #RESUME
       -->
 
-            <article class="resume" data-page="履歴書">
+            <article class="resume" data-page="resume">
 
                 <header>
                     <h2 class="h2 article-title">履歴書</h2>
@@ -661,7 +616,7 @@
         - #PORTFOLIO
       -->
 
-            <article class="portfolio" data-page="ポートフォリオ">
+            <article class="portfolio" data-page="portfolio">
 
                 <header>
                     <h2 class="h2 article-title">ポートフォリオ</h2>

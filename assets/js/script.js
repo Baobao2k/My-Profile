@@ -158,4 +158,28 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-//hieu ung chu chay
+//button
+// Điều hướng qua các tab (about, resume, portfolio, ...)
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll("[data-nav-link]");
+  const pages = document.querySelectorAll("article[data-page]");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      const target = link.getAttribute("data-target");
+
+      // Cập nhật nút active
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+
+      // Hiển thị đúng nội dung
+      pages.forEach(page => {
+        if (page.getAttribute("data-page") === target) {
+          page.classList.add("active");
+        } else {
+          page.classList.remove("active");
+        }
+      });
+    });
+  });
+});
