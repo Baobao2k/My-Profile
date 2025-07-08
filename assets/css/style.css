@@ -1602,10 +1602,12 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 100%;
     margin-bottom: 30px;
+    
   }
-
+  
+  .separator{display: none;}
   .sidebar.active { max-height: 584px; }
 
   .sidebar-info { gap: 25px; }
