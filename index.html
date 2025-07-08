@@ -220,6 +220,53 @@
 </div>
 
 
+<script>
+  const buttons = document.querySelectorAll(".navbar-link");
+  const toast = document.getElementById("toast-message");
+  const tabButtons = document.querySelectorAll(".tab-btn");
+
+  let currentIndex = 0;
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const index = parseInt(btn.getAttribute("data-index"));
+      if (buttons[index]) {
+        buttons[index].click();
+        currentIndex = index;
+        window.scrollTo({ top: 50, behavior: "smooth" });
+        updateActiveTabUI();
+      }
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const bodyHeight = document.body.scrollHeight;
+
+    if (scrollTop + windowHeight >= bodyHeight - 10 || scrollTop <= 5) {
+      toast.style.display = "block";
+    } else {
+      toast.style.display = "none";
+    }
+  });
+
+  function updateActiveTabUI() {
+    tabButtons.forEach((btn, i) => {
+      if (i === currentIndex) {
+        btn.style.backgroundColor = "#facc15";
+        btn.style.color = "#000";
+      } else {
+        btn.style.backgroundColor = "rgba(255,255,255,0.08)";
+        btn.style.color = "#fff";
+      }
+    });
+  }
+
+  updateActiveTabUI();
+</script>
+
+
             <!--
         - #ABOUT
       -->
