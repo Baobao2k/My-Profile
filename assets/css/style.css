@@ -542,7 +542,7 @@ main {
 @media (min-width: 768px), (orientation: landscape) {
   .sidebar-info {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start; /* Thêm dòng này để căn trái toàn bộ */
     text-align: left;
   }
@@ -553,7 +553,7 @@ main {
     align-items: flex-start;
     width: auto;
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 0px;
   }
 
   .info-content {
