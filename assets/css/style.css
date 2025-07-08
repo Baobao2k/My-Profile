@@ -226,7 +226,12 @@ article.active {
   display: block;
   animation: fade 0.5s ease backwards;
 }
-
+.title-small {
+  font-size: 14px;         
+  text-align: center;      
+  margin: 0;               
+  color: #666;             
+}
 @keyframes fade {
   0% {
     opacity: 0;
@@ -598,10 +603,10 @@ main {
     margin-right: 0px;
   }
 
-.info-content {
-  text-align: left;
-  align-items: flex-start;
-  margin-bottom: 20px; 
+  .info-content {
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 767px) {
@@ -734,7 +739,25 @@ time {
 .contact-text {
   text-align: left;
 }
+.info-content {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.name {
+  font-size: 24px; /* tuỳ chỉnh kích thước */
+  font-weight: bold;
+  margin: 0;
+}
+
+.title-small {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+}
 
 /*-----------------------------------*\
   #NAVBAR
@@ -816,9 +839,7 @@ time {
   font-size: 13px;
 }
 
-/*.navbar {
-  display: none;
-}*/
+
 
 .btn-me {
   white-space: nowrap;
@@ -2732,4 +2753,21 @@ textarea.form-input::-webkit-resizer {
 .social-list img {
   filter: none !important;
   mix-blend-mode: normal !important;
+}
+@media (max-width: 768px) {
+  .sidebar-info {
+    margin-bottom: 40px; /* Tạo khoảng trống để menu không bị che */
+  }
+
+  .navbar-list {
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+  }
+
+  .avatar-box img {
+    width: 100px;
+    height: auto;
+    border-radius: 15%;
+  }
 }
