@@ -598,10 +598,10 @@ main {
     margin-right: 0px;
   }
 
-  .info-content {
-    text-align: left;
-    align-items: flex-start;
-  }
+.info-content {
+  text-align: left;
+  align-items: flex-start;
+  margin-bottom: 20px; 
 }
 
 @media (max-width: 767px) {
@@ -816,9 +816,9 @@ time {
   font-size: 13px;
 }
 
-.navbar {
+/*.navbar {
   display: none;
-}
+}*/
 
 .btn-me {
   white-space: nowrap;
