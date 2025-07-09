@@ -1835,7 +1835,26 @@ textarea.form-input::-webkit-resizer {
     border-radius: 12px;
     font-size: 18px;
   }
+.marquee-wrapper {
+  width: 200px; /* hoặc auto/100% tuỳ ý */
+  overflow: hidden;
+  position: relative;
+}
 
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-left 10s linear infinite;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 
   /**
